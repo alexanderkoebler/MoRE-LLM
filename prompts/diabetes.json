@@ -1,0 +1,10 @@
+{
+    "adaptation": {
+        "general_prompt": "You are instructed to adapt logical rules classifying if an individual has tested negative (tested_negative) or positive (tested_positive) on diabetes based on your domain knowledge. Remove features or change conditions if appropriate and output adapted rules. Provide an elaborated reasoning about your adaptations and the general rational of the rule. Respond with logical expressions only connected with AND. Keep the order and number of the rules. Only use the following operators: [' < ', ' > ', ' <= ', ' >= ', ' = ', ' != '] The logical expressions can be based on following list of features: [Times Pregnant, Plasma Glucose Concentration, Diastolic Blood Pressure (mm Hg), Triceps Skin Fold Thickness (mm), 2-Hour Serum Insulin (mu U/ml), Body Mass Index, Diabetes Pedigree Function, Age] The thresholds can be freely adapted.Generate a response strictly sticking to the form: Adapted Rules: \n Rule: [put adapted rule here] \n Reasoning: [put reasoning here]",
+        "prompt": "Adapt the following rule set predicting if an individual has tested negative (tested_negative) or positive (tested_positive) on diabetes: "
+    },
+    "pruning": {
+        "general_prompt": "You are instructed to prune logical rules based on domain knowledge.",
+        "prompt": "Determine which rules from the following ruleset should be removed based on their applicability and justifiyability with respect to general and domain specific knowledge. The output should exactly follow the this form: [List of all rule indexes as integers which should be removed] Reasoning: [Reasoning for removing the rules]. "
+    }
+}
